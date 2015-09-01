@@ -1,0 +1,6 @@
+{% extends "News/news_base.html" %}
+{% block title%}News{% endblock %}
+{% block h1 %}{{ article.title }}{% endblock %}
+{% block body %}
+<pre>{{ article.newstext }}</pre>
+{% endblock body %}

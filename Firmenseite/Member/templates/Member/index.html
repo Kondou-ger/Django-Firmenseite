@@ -1,0 +1,13 @@
+{% extends "News/news_base.html" %}
+{% block title %}Startseite{% endblock %}
+{% block h1 %}Firmennews{% endblock %}
+{% block body %}
+{% if member %}
+    Wir haben folgende Mitglieder:<br/><br/>
+    <table>
+    <tr><th>Name</th><th>Rang</th><th>Seit wann dabei?</th></tr>
+    {% for i in member %}<tr><td><center>{{ i.name }}</center></td><td><center>{{ i.rank }}</center></td><td><center>{{ i.since }}</center></td></tr>
+    {% endfor %}</table>
+    <br/><br/><br/><br/><br/>
+{% endif %}
+{% endblock %}

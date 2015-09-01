@@ -1,0 +1,14 @@
+{% extends "News/news_base.html" %}
+{% block title %}Startseite{% endblock %}
+{% block h1 %}Firmennews{% endblock %}
+{% block body %}
+{% if article %}
+    Folgende News' stehen zur Verfügung:<br/><br/>
+    <table>
+    <tr><th>Titel</th><th>Autor</th><th>Datum</th></tr>
+    {% for i in article %}<tr><td><center><a href="/news/{{ i.id }}">{{ i.title }}</a></center></td><td><center>{{ i.author }}</center></td><td><center>{{ i.date }}</center></td></tr>
+    {% endfor %}</table>
+    <br/><br/><br/><br/><br/>
+    <a href="/member/">Unsere Mitglieder</a>
+{% endif %}
+{% endblock %}
